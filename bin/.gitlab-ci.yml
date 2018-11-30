@@ -1,0 +1,58 @@
+image: maven:latest
+stages:
+  - build
+  - test
+  - sonar
+  - package
+  - package_production
+
+before_script:
+  - export http_proxy=http://dextra2:12345678@10.52.132.3:8080
+  - export https_proxy=http://dextra2:12345678@10.52.132.3:8080
+  - cp settings.xml /root/.m2/settings.xml
+
+variables:
+  MAVEN_CLI_OPTS: "-s /root/.m2/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=/root/.m2/repository"
+
+cache:
+  paths:
+    - /root/.m2/repository
+    - target/
+
+build:
+  stage: build
+  tags:
+    - docker
+  script:
+    - mvn $MAVEN_CLI_OPTS compile
+
+test:
+  stage: test
+  script:
+    - mvn $MAVEN_CLI_OPTS test
+
+sonar:
+  stage: sonar
+  script:
+    - mvn sonar:sonar  -Dsonar.host.url=http://10.52.140.237:9000  -Dsonar.login=ac19b3172577456e171a90a3028b98a921fa54c7
+
+package:
+  only:
+    - develop
+  stage: package
+  script:
+    - mvn $MAVEN_CLI_OPTS package -P hom -Dmaven.test.skip=true
+  artifacts:
+      paths:
+        - target/identificacao-api.war
+
+package_production:
+  only:
+    - tags
+  stage: package_production
+  script:
+    - mvn $MAVEN_CLI_OPTS package -P prod -Dmaven.test.skip=true
+  artifacts:
+      paths:
+        - target/identificacao-api.war

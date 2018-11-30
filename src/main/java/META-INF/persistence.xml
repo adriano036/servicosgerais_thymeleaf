@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="servicos_gerais_clone">
+		<class>servicosgerais.api.entity.Cliente</class>
+		<class>servicosgerais.api.entity.Comentario</class>
+		<class>servicosgerais.api.entity.ConversaChat</class>
+		<class>servicosgerais.api.entity.Denuncia</class>
+		<class>servicosgerais.api.entity.Empresa</class>
+		<class>servicosgerais.api.entity.Endereco</class>
+		<class>servicosgerais.api.entity.HistoricoPagamento</class>
+		<class>servicosgerais.api.entity.MensagemConversa</class>
+		<class>servicosgerais.api.entity.Pessoa</class>
+		<class>servicosgerais.api.entity.Prestador</class>
+		<class>servicosgerais.api.entity.Servico</class>
+		<class>servicosgerais.api.entity.ServicoPrestado</class>
+		<class>servicosgerais.api.entity.ServicoPrestador</class>
+		<class>servicosgerais.api.entity.ServicoSistema</class>
+		<class>servicosgerais.api.entity.ServicoSistemaPrestado</class>
+		<class>servicosgerais.api.entity.Usuario</class>
+	</persistence-unit>
+</persistence>

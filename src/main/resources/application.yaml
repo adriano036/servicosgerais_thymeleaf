@@ -1,0 +1,46 @@
+spring:
+  profiles.active: dev
+#  web-server: http://localhost:7001/
+  datasource:
+    jndi-name: java:/MySqlDS
+    initialize: true
+#  jackson:
+#    joda-date-time-format: yyyy-MM-dd'T'HH:mm:ss.SSSZ
+#    serialization:
+#      write_dates_as_timestamps: false
+  jpa:
+    properties:
+      jadira:
+        usertype:
+          autoRegisterUserTypes: true    
+security:
+  basic:
+    enabled: true
+
+#---
+#
+#spring:
+#  profiles: dev
+#  datasource:
+#      initialize: false
+#---
+#
+#spring:
+#  profiles: hom
+#  datasource:
+#      initialize: false
+#---
+#
+#spring:
+#  profiles: test
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#---
+#
+#spring:
+#  profiles: prod
+#  datasource:
+#    initialize: false
+#  web-server: http://servicos.ccarj.intraer/
+#
