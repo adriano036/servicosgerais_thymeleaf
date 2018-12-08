@@ -38,6 +38,9 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/model
 	public String getHtml(Model model) {
+		System.out.println("teste 1");
+		System.out.println("teste 2");
+		model.addAttribute("adriano", "teste thymeleaf");
 		return "pastaTeste/teste";
 	}
 	

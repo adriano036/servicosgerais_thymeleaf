@@ -27,11 +27,11 @@ public class Endereco implements Serializable {
 	@Column(name="id_pessoa")
 	private int idPessoa;
 
-	private Object latitude;
+	//private Object latitude;
 
 	private String logradouro;
 
-	private Object longitude;
+	//private Object longitude;
 
 	//bi-directional many-to-one association to Cliente
 	@ManyToOne
@@ -94,13 +94,13 @@ public class Endereco implements Serializable {
 		this.idPessoa = idPessoa;
 	}
 
-	public Object getLatitude() {
-		return this.latitude;
-	}
-
-	public void setLatitude(Object latitude) {
-		this.latitude = latitude;
-	}
+//	public Object getLatitude() {
+//		return this.latitude;
+//	}
+//
+//	public void setLatitude(Object latitude) {
+//		this.latitude = latitude;
+//	}
 
 	public String getLogradouro() {
 		return this.logradouro;
@@ -110,13 +110,13 @@ public class Endereco implements Serializable {
 		this.logradouro = logradouro;
 	}
 
-	public Object getLongitude() {
-		return this.longitude;
-	}
-
-	public void setLongitude(Object longitude) {
-		this.longitude = longitude;
-	}
+//	public Object getLongitude() {
+//		return this.longitude;
+//	}
+//
+//	public void setLongitude(Object longitude) {
+//		this.longitude = longitude;
+//	}
 
 	public Cliente getCliente() {
 		return this.cliente;
