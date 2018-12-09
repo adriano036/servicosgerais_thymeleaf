@@ -1,4 +1,4 @@
-package servicosgerais.app.controller;
+package servicosgerais.thymeleaf.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,30 +13,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import io.swagger.annotations.ApiOperation;
-import servicosgerais.app.dto.TesteDTO;
-import servicosgerais.app.entity.Cliente;
-import servicosgerais.app.repository.ClienteRepository;
+import servicosgerais.dto.ClienteDTO;
 
 @Controller
 @RequestMapping("/teste")
 public class ClienteController {
 
-	@Autowired
-	private ClienteRepository clienteRepository;
-		
-	@GetMapping(value = "model")//ip:8080/servicosgerais-app/teste/model
+	@GetMapping(value = "model")//ip:8080/servicosgerais-api/teste/model
 	@ResponseBody
 	public ResponseEntity<Model> getModel(Model model) {
 		model.addAttribute("teste", 22);
 		return new ResponseEntity<Model>(model, HttpStatus.OK);
 	}
-	@GetMapping(value = "obj")//ip:8080/servicosgerais-app/teste/model
+	
+	@GetMapping(value = "obj")//ip:8080/servicosgerais-api/teste/model
 	@ResponseBody
-	public Cliente getObj(Cliente teste) {
-		return new Cliente();
+	public ClienteDTO getObj() {
+		return new ClienteDTO();
 	}
 	
-	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-app/teste/model
+	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/model
 	public String getHtml(Model model) {
 		System.out.println("teste 1");
 		System.out.println("teste 2");
@@ -47,7 +43,7 @@ public class ClienteController {
 	@ApiOperation(value="Teste post")
 	@RequestMapping(value="/testePost/{nrCpfOperador}", method=RequestMethod.POST)
 	@ResponseBody
-	public TesteDTO testePost(@PathVariable String nrCpfOperador, @RequestBody TesteDTO parametrosPost) throws Exception{
-		return new TesteDTO();
+	public ClienteDTO testePost(@PathVariable String nrCpfOperador, @RequestBody ClienteDTO parametrosPost) throws Exception{
+		return new ClienteDTO();
 	}
 }

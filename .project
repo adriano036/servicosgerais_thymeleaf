@@ -3,6 +3,7 @@
 	<name>servicos_gerais_thymeleaf</name>
 	<comment></comment>
 	<projects>
+		<project>servicosgerais_dto</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

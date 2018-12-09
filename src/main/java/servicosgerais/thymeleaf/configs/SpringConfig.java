@@ -1,4 +1,4 @@
-package servicosgerais.app.configs;
+package servicosgerais.thymeleaf.configs;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.support.ErrorPageFilter;
