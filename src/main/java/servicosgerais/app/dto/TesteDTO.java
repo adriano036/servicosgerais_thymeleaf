@@ -1,4 +1,4 @@
-package servicosgerais.api.dto;
+package servicosgerais.app.dto;
 
 public class TesteDTO {
 	int p1;

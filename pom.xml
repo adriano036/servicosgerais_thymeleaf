@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>servicosgerais</groupId>
-	<artifactId>servicosgerais-api</artifactId>
+	<artifactId>servicosgerais-app</artifactId>
 	<version>1.0.4</version>
 	<packaging>war</packaging>
 
-    <name>servicosgerais-api</name>
-    <description>API DE SERVIÇOS GERAIS</description>
+    <name>servicosgerais-app</name>
+    <description>APP DE SERVIÇOS GERAIS</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -34,11 +34,11 @@
             <version>${thymeleaf.version}</version>
         </dependency>
     	<dependency>
-				   <groupId>dom4j</groupId>
-				   <artifactId>dom4j</artifactId>
-				   <version>1.6.1</version>
-				   <scope>provided</scope>
-				</dependency>
+		   <groupId>dom4j</groupId>
+		   <artifactId>dom4j</artifactId>
+		   <version>1.6.1</version>
+		   <scope>provided</scope>
+		</dependency>
 		<dependency>
       		<groupId>mysql</groupId>
       		<artifactId>mysql-connector-java</artifactId>

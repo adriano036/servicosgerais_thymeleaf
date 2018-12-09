@@ -1,4 +1,4 @@
-package servicosgerais.api.configs;
+package servicosgerais.app.configs;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.support.ErrorPageFilter;

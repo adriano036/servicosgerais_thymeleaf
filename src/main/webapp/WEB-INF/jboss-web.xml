@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
-        <context-root>servicosgerais-api</context-root>
+        <context-root>servicosgerais-app</context-root>
 </jboss-web>

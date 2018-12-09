@@ -1,4 +1,4 @@
-package servicosgerais.api.entity;
+package servicosgerais.app.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

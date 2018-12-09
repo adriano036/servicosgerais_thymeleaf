@@ -1,4 +1,4 @@
-package servicosgerais.api.controller;
+package servicosgerais.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import io.swagger.annotations.ApiOperation;
-import servicosgerais.api.dto.TesteDTO;
-import servicosgerais.api.entity.Cliente;
-import servicosgerais.api.repository.ClienteRepository;
+import servicosgerais.app.dto.TesteDTO;
+import servicosgerais.app.entity.Cliente;
+import servicosgerais.app.repository.ClienteRepository;
 
 @Controller
 @RequestMapping("/teste")
@@ -24,19 +24,19 @@ public class ClienteController {
 	@Autowired
 	private ClienteRepository clienteRepository;
 		
-	@GetMapping(value = "model")//ip:8080/servicosgerais-api/teste/model
+	@GetMapping(value = "model")//ip:8080/servicosgerais-app/teste/model
 	@ResponseBody
 	public ResponseEntity<Model> getModel(Model model) {
 		model.addAttribute("teste", 22);
 		return new ResponseEntity<Model>(model, HttpStatus.OK);
 	}
-	@GetMapping(value = "obj")//ip:8080/servicosgerais-api/teste/model
+	@GetMapping(value = "obj")//ip:8080/servicosgerais-app/teste/model
 	@ResponseBody
 	public Cliente getObj(Cliente teste) {
 		return new Cliente();
 	}
 	
-	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/model
+	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-app/teste/model
 	public String getHtml(Model model) {
 		System.out.println("teste 1");
 		System.out.println("teste 2");

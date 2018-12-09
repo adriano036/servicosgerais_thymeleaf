@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:servicosgerais.api.Application</config>
+		<config>java:servicosgerais.app.Application</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

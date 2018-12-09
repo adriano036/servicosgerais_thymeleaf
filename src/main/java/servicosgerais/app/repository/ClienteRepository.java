@@ -1,8 +1,8 @@
-package servicosgerais.api.repository;
+package servicosgerais.app.repository;
 
 import org.springframework.stereotype.Repository;
 
-import servicosgerais.api.entity.Cliente;
+import servicosgerais.app.entity.Cliente;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
