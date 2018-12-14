@@ -6,7 +6,7 @@
 	<groupId>servicosgerais-thymeleaf</groupId>
 	<artifactId>servicosgerais-thymeleaf</artifactId>
 	<version>1.0.4</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 
     <name>servicosgerais-api</name>
     <description>API DE SERVIÇOS GERAIS</description>
