@@ -6,9 +6,9 @@
 	<groupId>servicosgerais-thymeleaf</groupId>
 	<artifactId>servicosgerais-thymeleaf</artifactId>
 	<version>1.0.4</version>
-	<packaging>pom</packaging>
+	<packaging>war</packaging>
 
-    <name>servicosgerais-api</name>
+    <name>servicosgerais-thymeleaf</name>
     <description>API DE SERVIÇOS GERAIS</description>
 
     <parent>
@@ -27,19 +27,18 @@
 
 
     <dependencies>
-    
-    	<dependency>
-            <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf-spring4</artifactId>
-            <version>${thymeleaf.version}</version>
-        </dependency>
     	<dependency>
 		   <groupId>dom4j</groupId>
 		   <artifactId>dom4j</artifactId>
 		   <version>1.6.1</version>
 		   <scope>provided</scope>
 		</dependency>
-		<dependency>
+    	<dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring4</artifactId>
+            <version>${thymeleaf.version}</version>
+        </dependency>
+    	<dependency>
       		<groupId>mysql</groupId>
       		<artifactId>mysql-connector-java</artifactId>
     	</dependency>

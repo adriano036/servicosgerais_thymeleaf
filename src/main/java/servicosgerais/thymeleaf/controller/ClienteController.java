@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 
 import io.swagger.annotations.ApiOperation;
 import servicosgerais.dto.ClienteDTO;
@@ -34,9 +35,15 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/model
 	public String getHtml(Model model) {
+		String urlAPI = "";
+		RestTemplate restTemplate = new RestTemplate();
+        ClienteDTO clienteDTO = restTemplate.getForObject(urlAPI, ClienteDTO.class);
+        System.out.println(clienteDTO.getId());
+        
 		System.out.println("teste 1");
 		System.out.println("teste 2");
 		model.addAttribute("adriano", "teste thymeleaf");
+		model.addAttribute("id_cliente", clienteDTO.getId());
 		return "pastaTeste/teste";
 	}
 	
