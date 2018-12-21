@@ -222,6 +222,11 @@
             <artifactId>logback-gelf</artifactId>
             <version>1.1.10</version>
         </dependency>
+        <dependency>
+        	<groupId>servicosgerais_dto</groupId>
+        	<artifactId>servicosgerais_dto</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>

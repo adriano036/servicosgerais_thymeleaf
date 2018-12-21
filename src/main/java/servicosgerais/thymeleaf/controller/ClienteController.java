@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
 import io.swagger.annotations.ApiOperation;
-import servicosgerais.dto.ClienteDTO;
+import servicosgerais_dto.dto.ClienteDTO;
 
 @Controller
 @RequestMapping("/teste")
@@ -30,6 +30,13 @@ public class ClienteController {
 	@GetMapping(value = "obj")//ip:8080/servicosgerais-api/teste/model
 	@ResponseBody
 	public ClienteDTO getObj() {
+		return new ClienteDTO();
+	}
+	
+	@ApiOperation(value="Teste get")
+	@RequestMapping(value="/testeGet/{nrCpfOperador}", method=RequestMethod.GET)
+	@ResponseBody
+	public ClienteDTO testeGet() throws Exception{
 		return new ClienteDTO();
 	}
 	
