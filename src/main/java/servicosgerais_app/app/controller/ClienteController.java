@@ -41,7 +41,7 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/model
 	public String getHtml(Model model) {
-		String urlAPI = "";
+		String urlAPI = "http://192.168.15.11:8080/servicosgerais-api/teste/testeGet/2";
 		RestTemplate restTemplate = new RestTemplate();
         ClienteDTO clienteDTO = restTemplate.getForObject(urlAPI, ClienteDTO.class);
         System.out.println(clienteDTO.getId());
