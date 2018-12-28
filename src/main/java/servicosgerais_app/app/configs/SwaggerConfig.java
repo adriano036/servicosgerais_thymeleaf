@@ -1,4 +1,4 @@
-package servicosgerais.thymeleaf.configs;
+package servicosgerais_app.app.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,13 +26,13 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
-                .tags(new Tag("API servicosgerais", "API de Serviços Gerais"))
+                .tags(new Tag("APP servicosgerais", "APP de Serviços Gerais"))
                 .apiInfo(info());
     }
 
     private ApiInfo info() {
-        return new ApiInfo("servicosgerais API",
-               "API de Serviços Gerais",
+        return new ApiInfo("servicosgerais APP",
+               "APP de Serviços Gerais",
                "v1.0.2",
                "",
                new Contact("Serviços Gerais","http://www.google.com/servicosgerais",""),

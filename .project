@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>servicos_gerais_thymeleaf</name>
+	<name>servicos_gerais_app</name>
 	<comment></comment>
 	<projects>
 		<project>servicosgerais_dto</project>

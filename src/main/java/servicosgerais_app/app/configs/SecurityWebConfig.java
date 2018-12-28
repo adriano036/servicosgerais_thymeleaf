@@ -1,4 +1,4 @@
-package servicosgerais.thymeleaf.configs;
+package servicosgerais_app.app.configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
