@@ -1,5 +1,6 @@
 package servicosgerais_app.app.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,9 @@ import servicosgerais_dto.dto.ClienteDTO;
 @RequestMapping("/teste")
 public class ClienteController {
 
+	@Value("${api.address}")
+	private String apiAddress;
+	
 	@GetMapping(value = "model")//ip:8080/servicosgerais-api/teste/model
 	@ResponseBody
 	public ResponseEntity<Model> getModel(Model model) {
@@ -41,7 +45,7 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/model
 	public String getHtml(Model model) {
-		String urlAPI = "http://192.168.15.11:8080/servicosgerais-api/teste/testeGet/2";
+		String urlAPI = apiAddress + "teste/testeGet/2";
 		RestTemplate restTemplate = new RestTemplate();
         ClienteDTO clienteDTO = restTemplate.getForObject(urlAPI, ClienteDTO.class);
         System.out.println(clienteDTO.getId());
