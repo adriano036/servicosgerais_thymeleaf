@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>servicosgerais-app</groupId>
-	<artifactId>servicosgerais-app</artifactId>
+	<groupId>servicosgerais-thymeleaf</groupId>
+	<artifactId>servicosgerais-thymeleaf</artifactId>
 	<version>1.0.4</version>
 	<packaging>war</packaging>
 
@@ -277,7 +277,7 @@
         </profile>
     </profiles>
     <build>
-        <finalName>servicosgerais-app</finalName>
+        <finalName>servicosgerais-thymeleaf</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

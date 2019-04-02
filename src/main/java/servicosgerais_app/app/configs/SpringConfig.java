@@ -1,5 +1,11 @@
 package servicosgerais_app.app.configs;
 
+import org.apache.catalina.Context;
+import org.apache.catalina.connector.Connector;
+import org.apache.tomcat.util.descriptor.web.SecurityCollection;
+import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.support.ErrorPageFilter;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +24,8 @@ import java.util.Collections;
 
 @Configuration
 public class SpringConfig {
-
+	
+	
 //	@Bean
 //	public ErrorPageFilter errorPageFilter() {
 //	    return new ErrorPageFilter();
