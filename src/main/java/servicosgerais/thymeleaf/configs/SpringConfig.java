@@ -1,4 +1,4 @@
-package servicosgerais_app.app.configs;
+package servicosgerais.thymeleaf.configs;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;

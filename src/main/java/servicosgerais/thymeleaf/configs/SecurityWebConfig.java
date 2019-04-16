@@ -1,4 +1,4 @@
-package servicosgerais_app.app.configs;
+package servicosgerais.thymeleaf.configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -18,10 +18,10 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/integracoes/**").authenticated()
-                .anyRequest().permitAll()
-                .and().httpBasic();
+//        http.csrf().disable()
+//                .authorizeRequests()
+//                .antMatchers("/integracoes/**").authenticated()
+//                .anyRequest().permitAll()
+//                .and().httpBasic();
     }
 }

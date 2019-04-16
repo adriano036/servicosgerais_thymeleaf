@@ -1,4 +1,4 @@
-package servicosgerais.thymeleaf;
+package servicosgerais.thymeleaf.configs;
 
 import org.apache.commons.httpclient.HttpHost;
 import org.apache.commons.httpclient.URI;

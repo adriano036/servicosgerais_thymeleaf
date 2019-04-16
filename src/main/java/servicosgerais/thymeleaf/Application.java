@@ -1,4 +1,4 @@
-package servicosgerais_app.app;
+package servicosgerais.thymeleaf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
