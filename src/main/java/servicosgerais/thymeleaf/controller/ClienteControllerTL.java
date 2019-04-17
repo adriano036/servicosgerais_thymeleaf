@@ -23,7 +23,7 @@ import servicosgerais_dto.dto.PessoaDTO;
 @RequestMapping("/cliente")
 public class ClienteControllerTL {
 
-	@RequestMapping(value = "/html",  method=RequestMethod.GET)//ip:8080/servicosgerais-api/teste/html
+	@RequestMapping(value = "/html",  method=RequestMethod.GET)
 	public String getHtml(Model model) throws Exception{
 		
 		ClienteDTO clienteDTO = (ClienteDTO) APIConnector.doGet("/cliente/obj", ClienteDTO.class);
