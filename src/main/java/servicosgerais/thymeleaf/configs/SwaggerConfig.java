@@ -27,13 +27,13 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("servicosgerais.thymeleaf.controller"))
                 .paths(PathSelectors.any())
                 .build()
-                .tags(new Tag("APP servicosgerais", "APP de Serviços Gerais"))
+                //.tags(new Tag("APP servicosgerais", "APP de Serviços Gerais"))
                 .apiInfo(info());
     }
 
     private ApiInfo info() {
-        return new ApiInfo("servicosgerais APP",
-               "APP de Serviços Gerais",
+        return new ApiInfo("servicosgerais APP (thymeleaf)",
+               "APP de Serviços Gerais (thymeleaf)",
                "v1.0.3",
                "",
                new Contact("Serviços Gerais teste","http://www.teste.com/servicosgerais",""),
